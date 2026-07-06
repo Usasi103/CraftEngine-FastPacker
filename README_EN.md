@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/craftengine-logo.avif" alt="CraftEngine" width="256" />
-  <h1>CraftEngine Asset Pack Generator</h1>
-  <p>Generate CraftEngine-ready asset packs from categorized images, entirely in your computer.</p>
+  <h1>CraftEngine Fast Packer</h1>
+  <p>Quickly generate CraftEngine-ready asset packs from categorised images, entirely on your computer.</p>
 
   <p>
     <strong>English</strong> |

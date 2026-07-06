@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./assets/craftengine-logo.avif" alt="CraftEngine" width="256" />
-  <h1>CraftEngine 资源包生成器</h1>
-  <p>把按分类导入的图片转换为 CraftEngine 可识别的资源包，全流程在本地完成。</p>
+  <h1>CraftEngine 快速打包器</h1>
+  <p>快速的将按分类导入的图片转换为 CraftEngine 可识别的资源包，全流程在本地完成。</p>
 
   <p>
     <a href="./README_EN.md">English</a> |
