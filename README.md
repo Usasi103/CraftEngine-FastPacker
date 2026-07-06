@@ -4,7 +4,7 @@
   <p>把按分类导入的图片转换为 CraftEngine 可识别的资源包，全流程在本地完成。</p>
 
   <p>
-    <a href="./README.md">English</a> |
+    <a href="./README_EN.md">English</a> |
     <strong>简体中文</strong>
   </p>
 </div>
