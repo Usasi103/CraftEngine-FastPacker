@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <ns0:title id="title">CraftEngine Asset Pack Generator UI overview</ns0:title>
+  <ns0:desc id="desc">A clean dashboard mockup showing pack metadata, DeepL settings, image drop zones, and generated entries.</ns0:desc>
+  <ns0:defs>
+    <ns0:linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <ns0:stop offset="0" stop-color="#edf3ef" />
+      <ns0:stop offset="1" stop-color="#d8e7df" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <ns0:feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#18231d" flood-opacity=".16" />
+    </ns0:filter>
+  </ns0:defs>
+  <ns0:rect width="1200" height="675" fill="url(#bg)" />
+  <ns0:rect x="64" y="54" width="1072" height="568" rx="18" fill="#ffffff" filter="url(#shadow)" />
+  <ns0:rect x="64" y="54" width="286" height="568" rx="18" fill="#f7faf7" />
+  <ns0:path d="M350 54v568" stroke="#dce5df" />
+  <ns0:circle cx="112" cy="108" r="30" fill="#1f745b" />
+  <ns0:path d="M98 108h28M112 94v28" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+  <ns0:text x="158" y="104" fill="#17211b" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">资源包</ns0:text>
+  <ns0:text x="158" y="131" fill="#607066" font-family="Segoe UI, Arial, sans-serif" font-size="14">CraftEngine 生成器</ns0:text>
+  <ns0:g font-family="Segoe UI, Arial, sans-serif">
+    <ns0:rect x="94" y="172" width="226" height="118" rx="10" fill="#fff" stroke="#dce5df" />
+    <ns0:text x="114" y="201" fill="#17211b" font-size="16" font-weight="700">资源包信息</ns0:text>
+    <ns0:rect x="114" y="219" width="186" height="18" rx="4" fill="#e8eee9" />
+    <ns0:rect x="114" y="249" width="145" height="18" rx="4" fill="#e8eee9" />
+    <ns0:rect x="94" y="312" width="226" height="118" rx="10" fill="#fff" stroke="#dce5df" />
+    <ns0:text x="114" y="341" fill="#17211b" font-size="16" font-weight="700">DeepL</ns0:text>
+    <ns0:rect x="114" y="359" width="186" height="18" rx="4" fill="#e8eee9" />
+    <ns0:rect x="114" y="389" width="92" height="26" rx="6" fill="#1f745b" />
+    <ns0:text x="129" y="408" fill="#fff" font-size="13" font-weight="700">翻译</ns0:text>
+    <ns0:rect x="94" y="452" width="226" height="118" rx="10" fill="#fff" stroke="#dce5df" />
+    <ns0:text x="114" y="481" fill="#17211b" font-size="16" font-weight="700">导出</ns0:text>
+    <ns0:rect x="114" y="499" width="186" height="18" rx="4" fill="#e8eee9" />
+    <ns0:rect x="114" y="529" width="130" height="26" rx="6" fill="#d58b2b" />
+    <ns0:text x="129" y="548" fill="#fff" font-size="13" font-weight="700">下载 zip</ns0:text>
+  </ns0:g>
+  <ns0:g font-family="Segoe UI, Arial, sans-serif">
+    <ns0:text x="392" y="102" fill="#17211b" font-size="26" font-weight="800">拖放图片，生成 CraftEngine 资源</ns0:text>
+    <ns0:text x="392" y="132" fill="#64736a" font-size="15">所有自动化在浏览器中运行。无数据库，无服务器端图片存储。</ns0:text>
+    <ns0:rect x="1016" y="80" width="40" height="40" rx="8" fill="#eef4ef" stroke="#dce5df" />
+    <ns0:text x="1028" y="106" fill="#1f745b" font-size="18" font-weight="800">A</ns0:text>
+    <ns0:rect x="1066" y="80" width="40" height="40" rx="8" fill="#eef4ef" stroke="#dce5df" />
+    <ns0:text x="1078" y="106" fill="#1f745b" font-size="18" font-weight="800">☼</ns0:text>
+    <ns0:g>
+      <ns0:rect x="392" y="168" width="166" height="118" rx="12" fill="#fbfdfb" stroke="#a9bbb0" stroke-dasharray="7 7" />
+      <ns0:text x="420" y="215" fill="#17211b" font-size="18" font-weight="700">物品</ns0:text>
+      <ns0:text x="420" y="243" fill="#64736a" font-size="13">物品贴图</ns0:text>
+      <ns0:rect x="420" y="257" width="36" height="22" rx="6" fill="#e8eee9" />
+      <ns0:text x="434" y="273" fill="#64736a" font-size="12">12</ns0:text>
+    </ns0:g>
+    <ns0:g>
+      <ns0:rect x="584" y="168" width="166" height="118" rx="12" fill="#fbfdfb" stroke="#a9bbb0" stroke-dasharray="7 7" />
+      <ns0:text x="612" y="215" fill="#17211b" font-size="18" font-weight="700">方块</ns0:text>
+      <ns0:text x="612" y="243" fill="#64736a" font-size="13">方块配置</ns0:text>
+      <ns0:rect x="612" y="257" width="36" height="22" rx="6" fill="#e8eee9" />
+      <ns0:text x="626" y="273" fill="#64736a" font-size="12">6</ns0:text>
+    </ns0:g>
+    <ns0:g>
+      <ns0:rect x="776" y="168" width="166" height="118" rx="12" fill="#fbfdfb" stroke="#a9bbb0" stroke-dasharray="7 7" />
+      <ns0:text x="804" y="215" fill="#17211b" font-size="18" font-weight="700">家具</ns0:text>
+      <ns0:text x="804" y="243" fill="#64736a" font-size="13">摆放</ns0:text>
+      <ns0:rect x="804" y="257" width="36" height="22" rx="6" fill="#e8eee9" />
+      <ns0:text x="818" y="273" fill="#64736a" font-size="12">4</ns0:text>
+    </ns0:g>
+    <ns0:g>
+      <ns0:rect x="968" y="168" width="120" height="118" rx="12" fill="#fbfdfb" stroke="#a9bbb0" stroke-dasharray="7 7" />
+      <ns0:text x="996" y="215" fill="#17211b" font-size="18" font-weight="700">表情</ns0:text>
+      <ns0:text x="996" y="243" fill="#64736a" font-size="13">字体图片</ns0:text>
+    </ns0:g>
+    <ns0:rect x="392" y="326" width="696" height="224" rx="12" fill="#fff" stroke="#dce5df" />
+    <ns0:rect x="392" y="326" width="696" height="50" rx="12" fill="#f0f5f1" />
+    <ns0:text x="420" y="358" fill="#17211b" font-size="17" font-weight="700">条目</ns0:text>
+    <ns0:rect x="934" y="340" width="58" height="24" rx="6" fill="#dfece5" />
+    <ns0:text x="952" y="357" fill="#1f745b" font-size="12" font-weight="700">物品</ns0:text>
+    <ns0:rect x="1002" y="340" width="64" height="24" rx="6" fill="#fff" stroke="#dce5df" />
+    <ns0:text x="1017" y="357" fill="#64736a" font-size="12" font-weight="700">方块</ns0:text>
+    <ns0:g fill="#17211b" font-size="13">
+      <ns0:text x="420" y="408">预览</ns0:text>
+      <ns0:text x="520" y="408">ID</ns0:text>
+      <ns0:text x="720" y="408">显示名称</ns0:text>
+    </ns0:g>
+    <ns0:g>
+      <ns0:rect x="420" y="428" width="42" height="42" rx="8" fill="#93c47d" />
+      <ns0:rect x="520" y="434" width="142" height="30" rx="6" fill="#f5f8f5" stroke="#dce5df" />
+      <ns0:text x="536" y="454" fill="#17211b" font-size="13">topaz_sword</ns0:text>
+      <ns0:rect x="720" y="434" width="210" height="30" rx="6" fill="#f5f8f5" stroke="#dce5df" />
+      <ns0:text x="736" y="454" fill="#17211b" font-size="13">黄玉剑</ns0:text>
+    </ns0:g>
+    <ns0:g>
+      <ns0:rect x="420" y="484" width="42" height="42" rx="8" fill="#6f8199" />
+      <ns0:rect x="520" y="490" width="142" height="30" rx="6" fill="#f5f8f5" stroke="#dce5df" />
+      <ns0:text x="536" y="510" fill="#17211b" font-size="13">深板岩</ns0:text>
+      <ns0:rect x="720" y="490" width="210" height="30" rx="6" fill="#f5f8f5" stroke="#dce5df" />
+      <ns0:text x="736" y="510" fill="#17211b" font-size="13">Deepslate</ns0:text>
+    </ns0:g>
+  </ns0:g>
+</ns0:svg>

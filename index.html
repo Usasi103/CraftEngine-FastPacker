@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraftEngine 资产包生成器</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="top-actions" aria-label="页面工具">
+      <button class="secondary icon-btn" id="languageToggleBtn" type="button" aria-label="切换语言" title="切换语言">文</button>
+      <button class="secondary icon-btn" id="themeToggleBtn" type="button" aria-label="切换主题" title="切换主题">◐</button>
+    </div>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">
+            <img src="./assets/craftengine-logo.avif" alt="CraftEngine" draggable="false" />
+          </span>
+          <div>
+            <h1 data-i18n="appTitle">资产包生成器</h1>
+            <p data-i18n="appSubtitle">CraftEngine 本地打包工具</p>
+          </div>
+        </div>
+
+        <section class="panel">
+          <h2 data-i18n="packInfo">包信息</h2>
+          <label>
+            <span data-i18n="namespace">命名空间</span>
+            <input id="namespaceInput" value="default" spellcheck="false" />
+          </label>
+          <label>
+            <span data-i18n="author">作者</span>
+            <input id="authorInput" value="Generated" />
+          </label>
+          <label>
+            <span data-i18n="version">版本</span>
+            <input id="versionInput" value="1.0" />
+          </label>
+          <label>
+            <span data-i18n="description">描述</span>
+            <input id="descriptionInput" value="Generated assets for CraftEngine" />
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>DeepL</h2>
+          <label>
+            API Key
+            <input id="deeplKeyInput" type="password" autocomplete="off" placeholder="可留空" />
+          </label>
+          <label>
+            <span data-i18n="endpoint">接口</span>
+            <select id="deeplHostInput">
+              <option value="https://api-free.deepl.com/v2/translate">Free</option>
+              <option value="https://api.deepl.com/v2/translate">Pro</option>
+            </select>
+          </label>
+          <button class="secondary" id="translateBtn" type="button">
+            <span class="icon">文</span>
+            <span data-i18n="translateMissing">翻译空名称</span>
+          </button>
+        </section>
+
+        <section class="panel">
+          <h2 data-i18n="export">导出</h2>
+          <label>
+            <span data-i18n="fileName">文件名</span>
+            <input id="zipNameInput" value="generated_assets.zip" />
+          </label>
+          <button class="primary" id="downloadBtn" type="button">
+            <span class="icon">↓</span>
+            <span data-i18n="downloadPack">下载资产包</span>
+          </button>
+          <p id="statusText" class="status">等待图片</p>
+        </section>
+
+      </aside>
+
+      <section class="workspace">
+        <div class="toolbar">
+          <div>
+            <h2 data-i18n="imageTypesTitle">图片分类</h2>
+            <p data-i18n="imageTypesHint">把图片放进对应类型，名称留空时使用文件名或 DeepL 译名。</p>
+          </div>
+          <button class="danger" id="clearBtn" type="button" data-i18n="clear" title="清空当前已导入的所有图片条目和名称，已下载的文件不受影响。">清空</button>
+        </div>
+
+        <aside class="notice-panel" id="privacyNotice">
+          <div class="notice-copy">
+            <div>
+              <h2 data-i18n="frontendNoticeTitle">前端自动化处理</h2>
+              <p data-i18n="frontendNoticeBody">
+                图片解析、名称整理、配置生成、PNG 转换和 zip 打包都在当前浏览器前端完成。这个工具不写数据库，也不会把你的图片保存到服务器。
+              </p>
+            </div>
+            <div>
+              <h2 data-i18n="deeplNoticeTitle">DeepL 说明</h2>
+              <p data-i18n="deeplNoticeBody">
+                只有点击“翻译空名称”时，待翻译的文件名才会发送到 DeepL。通过本地服务转发时不会写数据库，也不会保存 API Key。
+              </p>
+            </div>
+          </div>
+          <button class="notice-close" id="noticeCloseBtn" type="button" aria-label="关闭提示">×</button>
+        </aside>
+
+        <section class="guide-panel">
+          <h2 data-i18n="stepsTitle">操作步骤</h2>
+          <ol>
+            <li data-i18n="step1">在左侧填写命名空间、作者、版本和描述，这些内容会写入导出的 `pack.yml`。</li>
+            <li data-i18n="step2">把图片拖入“物品、方块、家具、表情”对应区域，也可以点击区域选择多个图片。</li>
+            <li data-i18n="step3">检查表格里的 ID。ID 会作为 CraftEngine 物品、方块、家具或表情的配置名，建议只用小写英文、数字和下划线。</li>
+            <li data-i18n="step4">点击“语言”按钮切换当前编辑语言，再填写或翻译对应语言的名称。</li>
+            <li data-i18n="step5">表情触发词会自动跟随 ID，例如 ID 是 `smile` 时触发词就是 `:smile:`。</li>
+            <li data-i18n="step6">确认无误后点击“下载资产包”，得到的 zip 可解压后放入 CraftEngine 资产目录测试。</li>
+          </ol>
+        </section>
+
+        <div class="drop-grid" id="dropGrid"></div>
+
+        <section class="table-panel">
+          <div class="table-head">
+            <div>
+              <h2 data-i18n="entries">条目</h2>
+              <span id="countBadge">0 个文件</span>
+            </div>
+            <div class="filter-bar" id="filterBar" aria-label="筛选条目类型"></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="preview">预览</th>
+                  <th>ID</th>
+                  <th id="nameColumnHeader">简体中文名称</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="assetRows"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <button class="back-to-top" id="backToTopBtn" type="button" hidden>↑</button>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
